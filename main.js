@@ -93,28 +93,48 @@ var formData = [
              var newInput = document.createElement("input");
              newInput.type=formData[i].type;
              newInput.id = formData[i].id;
+             newInput.placeholder = formData[i].label;
              form.appendChild(newInput);
      }
          else if (formData[i].type === "tel"){
              var newInput = document.createElement("input");
              newInput.type=formData[i].type;
              newInput.id = formData[i].id;
-             form.appendChild(newInput);}
-             else if (formData[i].type === "select"){
-        
+             newInput.placeholder = formData[i].label
+             form.appendChild(newInput);             
+             
+            }
+
+             
+        else if (formData[i].type === "select"){
              var newInput = document.createElement("select");
              newInput.type=formData[i].type;
              newInput.id = formData[i].id;
+             newInput.value = formData[i].label
              form.appendChild(newInput);
-             
-             for (let x=0; x<formData[0,[x]].length; x++)
-
-             {var newOption = document.createElement("option")  
-                 newOption.value = formData[0,[x]].value;
-                 newOption.label = formData[0,[x]].label;
-                 form.appendChild(newOption);
-                 alert("no");
+            
+             for (let x=-1; x<formData[i].options.length; x++){
+                 if(x != -1){
+                 var newOption = document.createElement("option")  ;
+                 newOption.value = formData[i].options[x].value;
+                 newOption.textContent = formData[i].options[x].label;
+                  newInput.appendChild(newOption);}
+                  else {
+                       var newOption = document.createElement("option");
+                       newOption.textContent = formData[i].label
+                       newInput.appendChild(newOption);}
                 }
+        }
+                else if (formData[i].type === "textarea"){
+                    var newOption = document.createElement("textarea");
+                    newOption.type = formData[i].type;
+                    newOption.id = formData[i].id;
+                    newOption.placeholder = formData[i].label
+                    form.appendChild(newOption);
+                    
+
+
+
             }
 
  }

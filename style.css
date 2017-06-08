@@ -3,7 +3,7 @@
 
 
 
-body{ margin: 10vw 25vw 0 25vw}
+body{ margin: 4vw 30vw 0;}
 h1{ background-color: #398BC7;
 color:white; 
 font-size:xx-large;
@@ -12,10 +12,33 @@ padding:2vw;
 margin: 0 0 0 0;
 
 }
-input{
-    padding:.5vw;
- margin:.5vw 0;
+.field{
+    display:flex;
+    }
+
+.field input{ padding:0.5vw 0;
+width:99%;
+margin:1.5vw 0;
 }
+
+.field select {
+    height:2.5vw;
+    width:99%;
+
+}
+
+
+
+
+
+
+.field textarea {
+    margin: 1.5vw 0;
+    width: 98%;
+    height: 6vw;
+}
+
+/*.field textarea { width:1vw;}*/
 
 
 
