@@ -36,6 +36,7 @@ margin:1.5vw 0;
     margin: 1.5vw 0;
     width: 98%;
     height: 6vw;
+    resize:none;
 }
 
 /*.field textarea { width:1vw;}*/
