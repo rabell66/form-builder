@@ -1,0 +1,40 @@
+
+
+
+
+
+body{ margin: 10vw 25vw 0 25vw}
+h1{ background-color: #398BC7;
+color:white; 
+font-size:xx-large;
+font-weight:lighter;
+padding:2vw;
+margin: 0 0 0 0;
+
+}
+input{
+    padding:.5vw;
+ margin:.5vw 0;
+}
+
+
+
+
+
+
+button{
+    background-color: #398BC7;
+    color:white;
+    margin:2vw;
+    padding:.75vw;
+    border-radius: 2px;
+    border-style:none;
+
+}
+
+footer{
+    background-color: #C7DEEF
+}
+
+
+  
