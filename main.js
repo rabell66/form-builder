@@ -80,29 +80,17 @@ var formData = [
  
  function createForm(){
      var form = document.querySelector(".field")
+            
     
      for (let i=0; i< formData.length; i++){
-         if(formData[i].type === "text"){
-             var newInput = document.createElement("input");
-             newInput.type=formData[i].type;
-             newInput.id = formData[i].id;
-             newInput.placeholder = formData[i].label;
-             form.appendChild(newInput);
+         if(formData[i].type === "text"||formData[i].type === "email"){
+           
+           option(i, form);   
          }
-         else if (formData[i].type === "email"){
-             var newInput = document.createElement("input");
-             newInput.type=formData[i].type;
-             newInput.id = formData[i].id;
-             newInput.placeholder = formData[i].label;
-             form.appendChild(newInput);
-     }
+    
          else if (formData[i].type === "tel"){
-             var newInput = document.createElement("input");
-             newInput.type=formData[i].type;
-             newInput.id = formData[i].id;
-             newInput.placeholder = formData[i].label
-             form.appendChild(newInput);             
-             
+                        
+             option(i, form)
             }
 
              
@@ -142,7 +130,14 @@ var formData = [
  
 }
 
-
+function option(i,form){
+   var newInput = document.createElement("input");
+    newInput.type=formData[i].type;
+             newInput.id = formData[i].id;
+             newInput.placeholder = formData[i].label;
+             form.appendChild(newInput);
+             return;
+}
 
  
  console.log(formData[0].type);
